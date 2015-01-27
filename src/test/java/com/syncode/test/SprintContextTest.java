@@ -1,11 +1,12 @@
 package com.syncode.test;
 
 
-import static org.junit.Assert.*;
-import com.syncode.springtest1.bean.*;
-import com.syncode.spring.*;
+import static org.junit.Assert.assertSame;
 
 import org.junit.Test;
+
+import com.syncode.spring.SpringContextExamplo;
+import com.syncode.spring.bean.FileEventType;
 
 public class SprintContextTest {
 
@@ -14,7 +15,7 @@ public class SprintContextTest {
 	  SpringContextExamplo spr = new SpringContextExamplo();	
 	  FileEventType  file1 = spr.getInstance1();	
 	  FileEventType file2 = spr.getInstance2();
-	  assertEquals(file1, file2); 
+	  assertSame(file1, file2); 
 	}
 
 }

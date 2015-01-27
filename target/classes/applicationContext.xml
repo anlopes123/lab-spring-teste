@@ -2,10 +2,9 @@
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
  
 <beans>
- 
-  <bean id="fileEventType" class="com.syncode.springtest1.bean.FileEventType" singleton="true">
-    <property name="eventType" value="10"/>
-    <property name="description" value="A sample description here"/>
+  <bean id="serviceLocator" class="com.syncode.spring.bean.DefaultServiceLocator" ></bean>
+  
+  <bean id="fileEventType" class="com.syncode.spring.bean.FileEventType"  factory-bean="serviceLocator" factory-method="createSpringContextExemplo" singleton="true">
   </bean> 
  
 </beans>
